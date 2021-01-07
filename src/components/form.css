@@ -1,0 +1,24 @@
+form {
+  font-family: "Poppins";
+}
+
+label:first-child {
+  display: block;
+}
+
+input[type="radio"] {
+  position: absolute;
+  width: 5vw;
+  height: 5vw;
+}
+
+.priorityContainer {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.priority-container > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
