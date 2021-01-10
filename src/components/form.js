@@ -1,32 +1,35 @@
 import React from "react"
 import "./form.css"
 
+
 const Form = () => {
+
     return (
         <form action="">
             <label for="todo">what i have to do</label>
             <input type="text" name="todo" id="todo" required></input>
 
             <p>how bad i have to do it</p>
-            <div className="priorityContainer">
-  
-                <div>
-                    {/* <input type="radio" id="low" name="low"></input> */}
-                    <p>🙂</p>
-                    <label for="low">not very</label>
+             <div className="priorityContainer">
+                <div className="priority">
+                    <input className="input-hidden" type="radio" id="low" name="priority"></input>
+                   <label for="low"><br></br></label>
                 </div>
 
-                <div>
-                    {/* <input type="radio" id="mid" name="mid"></input> */}
-                    <p>😐</p>
-                    <label for="mid">eh</label>
+                <div className="priority">
+                    <input className="input-hidden" type="radio" id="mid" name="priority"></input>    
+                     <label for="mid"><br></br></label>
                 </div>
-                {/* <label for="mid">😐 eh</label>
-                <input type="radio" id="mid" name="mid"></input>
-                <label for="high">😰 pretty bad</label>
-                <input type="radio" id="high" name="high"></input>
-                <label for="urgent">😡 defcon 1</label>
-                <input type="radio" id="urgent" name="urgent"></input> */}
+
+                <div className="priority">
+                    <input className="input-hidden" type="radio" id="high" name="priority"></input>    
+                     <label for="high"><br></br></label>
+                </div>
+
+                 <div className="priority">
+                    <input className="input-hidden" type="radio" id="urgent" name="priority"></input>    
+                     <label for="urgent"><br></br></label>
+                </div>
             </div>
 
 

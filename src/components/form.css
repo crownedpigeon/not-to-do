@@ -1,15 +1,10 @@
 form {
   font-family: "Poppins";
+  width: 75vw;
 }
 
 label:first-child {
   display: block;
-}
-
-input[type="radio"] {
-  position: absolute;
-  width: 5vw;
-  height: 5vw;
 }
 
 .priorityContainer {
@@ -21,4 +16,69 @@ input[type="radio"] {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.priority {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+}
+
+.input-hidden {
+  position: absolute;
+  width: 5vw;
+  height: 5vh;
+  visibility: hidden;
+}
+
+input[type="radio"] + label {
+  text-align: center;
+  padding: 0.8rem;
+  font-size: 1.5rem;
+  line-height: 1rem;
+}
+
+input[type="radio"] + label[for="low"]::before {
+  content: "🙂";
+}
+
+input[type="radio"] + label[for="mid"]::before {
+  content: "😐";
+}
+
+input[type="radio"] + label[for="high"]::before {
+  content: "😰";
+}
+
+input[type="radio"] + label[for="urgent"]::before {
+  content: "😡";
+}
+
+input[type="radio"] + label::after {
+  font-size: 0.75rem;
+}
+
+input[type="radio"] + label[for="low"]::after {
+  content: "not very";
+}
+
+input[type="radio"] + label[for="mid"]::after {
+  content: "eh";
+}
+
+input[type="radio"] + label[for="high"]::after {
+  content: "pretty bad";
+}
+
+input[type="radio"] + label[for="urgent"]::after {
+  content: "defcon 1";
+}
+
+input[type="radio"]:checked + label {
+  font-size: 2rem;
+}
+
+input[type="radio"]:checked + label::after {
+  font-weight: bold;
+  color: cadetblue;
 }
