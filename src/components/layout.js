@@ -7,27 +7,14 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-// import { useStaticQuery, graphql } from "gatsby"
 
-import Form from "./form"
 import "./layout.css"
 
-const Layout = ({ children }) => {
-  // const data = useStaticQuery(graphql`
-  //   query SiteTitleQuery {
-  //     site {
-  //       siteMetadata {
-  //         title
-  //       }
-  //     }
-  //   }
-  // `)
 
+const Layout = ({children}) => {
   return (
     <>
-      {/* <Header siteTitle={data.site.siteMetadata?.title || `Title`} /> */}
-      <Form></Form>
-      {/* TODO : add todos here */}
+      {children}
     </>
   )
 }
