@@ -1,0 +1,29 @@
+h2 {
+  margin-top: 2vh;
+  font-family: "Poppins";
+  padding: 2vw;
+}
+
+.low {
+  border: 1px solid black;
+  font-weight: 100;
+  font-size: 1rem;
+}
+
+.mid {
+  border: 2px solid black;
+  font-weight: 400;
+}
+
+.high {
+  border: 4px solid black;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.urgent {
+  border: 6px solid black;
+  font-weight: 900;
+  font-size: 1.5rem;
+  font-style: italic;
+}
