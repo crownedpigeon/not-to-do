@@ -7,13 +7,32 @@
 
 import React from "react"
 import PropTypes from "prop-types"
+import { useStaticQuery, graphql } from "gatsby"
+import Helmet from "react-helmet"
 
 import "./layout.css"
 
 
 const Layout = ({children}) => {
+const data = useStaticQuery(graphql`
+    query SiteTitleQuery {
+      site {
+        siteMetadata {
+           title,
+           description
+        }
+      }
+    }
+  `)
+
   return (
     <>
+    <Helmet>
+            {/* configuring site metadata */}
+            <html lang="en" />
+            <title>{data.site.siteMetadata?.title || 'Title'}</title>
+            <meta name="description" content={data.site.siteMetadata?.description || 'description'}/>
+        </Helmet>
       {children}
     </>
   )
