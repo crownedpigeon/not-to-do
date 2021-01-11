@@ -1,7 +1,7 @@
 import React from "react"
 import Todo from "./todo"
 
-const TodoList = ({todos}) => {
+const TodoList = ({todos, removeTodo}) => {
     const comparePriority= (todoA, todoB) => {
         console.log(`SORTING ${JSON.stringify(todoA)} ${JSON.stringify(todoB)}`)
         if(todoA.order < todoB.order) return -1;
@@ -11,7 +11,7 @@ const TodoList = ({todos}) => {
 
     return (
         <div>
-            {todos.sort(comparePriority).map((todo, index) =>  <Todo key={index} index={index} todo={todo}></Todo>)}
+            {todos.sort(comparePriority).map((todo, index) =>  <Todo removeTodo={removeTodo} key={index} index={index} todo={todo}></Todo>)}
         </div>
     )
 }

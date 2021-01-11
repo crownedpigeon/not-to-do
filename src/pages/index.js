@@ -12,10 +12,15 @@ const IndexPage = () => {
     setTodos(newTodos)
   }
 
+const removeTodo = (removedTodo) => {
+  const newTodos = todos.filter(todo => todo !== removedTodo)
+  setTodos(newTodos)
+}
+
   return (
     <Layout> 
       <Form addTodo={addTodo}></Form>
-      <TodoList todos = {todos}></TodoList>
+      <TodoList removeTodo={removeTodo} todos = {todos}></TodoList>
    </Layout>
    )
 }

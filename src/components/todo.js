@@ -1,9 +1,11 @@
 import React from "react"
 import "./todo.css"
 
-const Todo = ({todo}) => {
+const Todo = ({todo, removeTodo}) => {
     return (
-        <h2 className={todo.priority}>{todo.text}</h2>
+        <>
+        <h2 className={todo.priority}>{todo.text} <span onClick={() => removeTodo(todo)}>x</span></h2>
+        </>
     )
 }
 
