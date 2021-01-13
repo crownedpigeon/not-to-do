@@ -1,10 +1,10 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import Layout from "../components/layout";
 import Form from "../components/form"
 import TodoList from "../components/todolist"
 
 const IndexPage = () => {
-  const [todos, setTodos] = useState([])
+  const [todos, setTodos] = useState(JSON.parse(localStorage.getItem("sessionTodos")) || [])
 
 const comparePriority= (todoA, todoB) => {
         if(todoA.order < todoB.order) return -1;
@@ -23,6 +23,10 @@ const removeTodo = (removedTodo) => {
   const newTodos = todos.filter(todo => todo !== removedTodo)
   setTodos(newTodos)
 }
+
+useEffect(() => {
+  localStorage.setItem('sessionTodos', JSON.stringify(todos))
+}, [todos])
 
   return (
     <Layout> 
