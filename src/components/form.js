@@ -10,6 +10,9 @@ const Form = ({addTodo}) => {
 
     const submit = (e) => {
         addTodo({text, priority, order})
+        setText('');
+        setPriority('');
+        setOrder(0);
         e.preventDefault();
     }
 
