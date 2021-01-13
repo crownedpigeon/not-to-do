@@ -1,16 +1,12 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.com">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
 <h1 align="center">
-  Gatsby's default starter
+  ✅ Not To Do
 </h1>
+<h2>everyone has a todo app -- this is a <em>not</em> to do app :) </h2>
+Know what you have to do most by assigning priority to your todo list. Your list is ordered from highest priority to least, and designed so  high priority items demand more visual attention. All wrapped in a cute, friendly UI.
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+Check it out here:
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._
+Or follow the install steps below
 
 ## 🚀 Quick start
 
