@@ -1,10 +1,19 @@
 form {
   font-family: "Poppins";
   width: 75vw;
+  height: 28vh;
+  margin-top: 2vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 label:first-child {
   display: block;
+}
+
+input[type="text"] {
+  padding: 0.5rem;
 }
 
 .priorityContainer {
