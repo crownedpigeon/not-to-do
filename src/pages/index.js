@@ -25,7 +25,7 @@ const removeTodo = (removedTodo) => {
 }
 
 useEffect(() => {
-  localStorage.setItem('sessionTodos', JSON.stringify(todos))
+  if(process.isClient) localStorage.setItem('sessionTodos', JSON.stringify(todos))
 }, [todos])
 
   return (
