@@ -49,6 +49,7 @@ input[type="submit"] {
   padding: 0.5rem;
   font-family: "Poppins";
   color: white;
+  -webkit-appearance: none;
 }
 
 input[type="radio"] + label {
