@@ -4,8 +4,7 @@ import Form from "../components/form"
 import TodoList from "../components/todolist"
 
 const IndexPage = () => {
-
-  const [todos, setTodos] = useState(window ? JSON.parse(localStorage.getItem("sessionTodos")) || [] : [])
+  if (window) const [todos, setTodos] = useState(JSON.parse(localStorage.getItem("sessionTodos")) || [] )
 
 const comparePriority= (todoA, todoB) => {
         if(todoA.order < todoB.order) return -1;
